@@ -1,0 +1,58 @@
+Normal Distributions.Rmd
+========================================================
+author: Mehrin Kiani
+date: 
+
+Normal Distribution
+========================================================
+
+A normal distribution is fully defined by its mean and standard deviation. 
+Following plot shows a normal deviation of mean 0 and standard deviation 1.
+
+```{r}
+x=seq(-10,10,length=200)
+y1=dnorm(x,mean=0,sd=1)
+plot(x,y1,type="l",lwd=2,col="red")
+```
+
+
+Variation in Mean
+========================================================
+To demonstrate the affect of change in mean on a normal distribution, the following plot shows a normal distribution (blue) with a different mean (mean=2) and same standard deviation (sd=1) as the one plotted in red (mean=0, sd=1). 
+
+"Change in mean is equivalent to shift of the distribution along x-axis"
+
+```{r, echo=FALSE}
+x=seq(-10,10,length=200)
+y1=dnorm(x,mean=0,sd=1)
+plot(x,y1,type="l",lwd=2,col="red")
+par(new = TRUE)
+y2=dnorm(x,mean=2,sd=1)
+plot(x,y2,type="l",lwd=2,col="blue")
+```
+
+
+Variation in Standard Deviation 
+========================================================
+
+Likewise, change in standard deviation on a normal distribution also changes 
+"Change in standard deviation is equivalent to spread/shrinkage of the distribution about its mean"
+
+```{r, echo=FALSE}
+x=seq(-10,10,length=200)
+y1=dnorm(x,mean=0,sd=1)
+plot(x,y1,type="l",lwd=2,col="red")
+par(new = TRUE)
+y2=dnorm(x,mean=0,sd=3)
+plot(x,y2,type="l",lwd=2,col="blue")
+```
+
+Conclusion
+========================================================
+
+A change in mean and standard deviation changes a normal distribution:
+
+
+-Change in mean is equivalent to shift of the distribution along x-axis
+
+-Change in standard deviation is equivalent to spread/shrinkage of the distribution about its mean
